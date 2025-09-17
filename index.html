@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aymen Abdujebar | Web Developer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <h2 class="logo">Aymen<span>Dev</span></h2>
+    <ul class="nav-links">
+      <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#services" class="nav-link">Services</a></li>
+      <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+      <li><a href="#reviews" class="nav-link">Reviews</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <a href="https://www.fiverr.com/users/aymen_abdujebar/seller_dashboard#!" target="_blank" class="nav-btn">Hire Me</a>
+  </nav>
+
+  <!-- Home -->
+  <section class="section active" id="home">
+    <div class="hero">
+      <div class="hero-text">
+        <h1 class="glow">Hi, I'm <span>Aymen Abdujebar</span></h1>
+        <h2 class="glow-small">Frontend Web Developer</h2>
+        <p>I create <b>colorful, modern & responsive</b> websites that make brands stand out.</p>
+        <div class="btn-group">
+          <a href="#portfolio" class="btn nav-link">See My Work</a>
+          <a href="https://www.fiverr.com/users/aymen_abdujebar/seller_dashboard#!" target="_blank" class="btn fiverr-btn">Hire Me on Fiverr</a>
+        </div>
+      </div>
+      <div class="hero-img">
+        <img src="Aymen.jpg" alt="Aymen Abdujebar">
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section" id="about">
+    <h2>About Me</h2>
+    <p>
+      I'm a <b>Frontend Developer</b> who transforms ideas into 
+      stylish, responsive, and functional websites.  
+      My mission: give every client a website that feels special ✨
+    </p>
+  </section>
+
+  <!-- Services -->
+  <section class="section" id="services">
+    <h2>What I Offer</h2>
+    <div class="service-grid">
+      <div class="service-card"><h3>Landing Pages</h3><p>High-converting responsive pages.</p></div>
+      <div class="service-card"><h3>E-commerce</h3><p>Modern shops with checkout & product grids.</p></div>
+      <div class="service-card"><h3>Portfolios</h3><p>Personal and business portfolios with 3D visuals.</p></div>
+      <div class="service-card"><h3>Business Sites</h3><p>Professional websites for brands & startups.</p></div>
+    </div>
+  </section>
+
+  <!-- Portfolio (Only 3 Projects) -->
+  <section class="section" id="portfolio">
+    <h2>My Projects</h2>
+    <div class="portfolio-grid">
+      <div class="card">
+        <img src="images/landing-page.png" alt="Landing Page">
+        <h3>Landing Page</h3>
+      </div>
+      <div class="card">
+        <img src="images/ecommerce.png" alt="E-commerce Website">
+        <h3>E-commerce</h3>
+      </div>
+      <div class="card">
+        <img src="images/portfolio.png" alt="Portfolio Website">
+        <h3>Portfolio</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section" id="reviews">
+    <h2>Client Reviews</h2>
+    <div class="review-grid">
+      <div class="review">"Outstanding work, very professional!" <h4>- John D.</h4></div>
+      <div class="review">"Delivered on time with amazing design." <h4>- Sarah K.</h4></div>
+      <div class="review">"Creative and reliable developer." <h4>- Michael R.</h4></div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section" id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:aymencandy2@gmail.com">aymencandy2@gmail.com</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Aymen Abdujebar | Frontend Developer</p>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    const links = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('.section');
+
+    links.forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const target = link.getAttribute('href').substring(1);
+        sections.forEach(sec => sec.classList.remove('active'));
+        document.getElementById(target).classList.add('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
